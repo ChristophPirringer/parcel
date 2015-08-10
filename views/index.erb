@@ -1,29 +1,37 @@
 <h1 id="title">Enter whatever</h1>
-<form action='result'>
+<form action='/result'>
 
   <div class="form-group">
-    <label for="height">Side a:</label>
+    <label for="height">Parcel height:</label>
     <input id="height" name="height" class="form-control" type="number">
   </div>
 
   <div class="form-group">
-    <label for="width">Side b:</label>
+    <label for="width">Parcel width:</label>
     <input id="width" name="width" class="form-control" type="number">
   </div>
 
   <div class="form-group">
-    <label for="depth">Side c:</label>
+    <label for="depth">Parcel depth:</label>
     <input id="depth" name="depth" class="form-control" type="number">
   </div>
 
   <div class="form-group">
-    <label for="weight">Side c:</label>
+    <label for="weight">Parcel weight:</label>
     <input id="weight" name="weight" class="form-control" type="number">
   </div>
 
   <div class="form-group">
-    <label for="distance">Side c:</label>
+    <label for="distance">Delivery distance:</label>
     <input id="distance" name="distance" class="form-control" type="number">
+  </div>
+
+  <div class="form-group">
+    <label for"delivery_mode">Choose your delivery-type:</label>
+      <br>
+      <input type="checkbox" name="delivery_mode" value="fast_delivery" id="fast_delivery"> I want fast delivery!
+      <br>
+      <input type="checkbox" name="delivery_mode" value="regular_delivery" id="regular_delivery"> Bring it whenever!
   </div>
 
   <button type="submit" class="btn">Tell Me!</button>

@@ -14,6 +14,7 @@ get('/result') do
   @depth = params.fetch("depth").to_f()
   @weight = params.fetch("weight").to_f()
   @distance = params.fetch("distance").to_f()
+  @delivery_mode = params.fetch("delivery_mode")
   test_parcel = Parcel.new(@height, @width, @depth, @weight, @distance )
   @shipping_cost= test_parcel.cost_to_ship()
   @volume=test_parcel.volume()

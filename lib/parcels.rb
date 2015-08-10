@@ -1,11 +1,12 @@
 class Parcel
 
-  define_method(:initialize) do |height, width, length, weight, distance|
+  define_method(:initialize) do |height, width, length, weight, distance, delivery_type|
     @height=height
     @width=width
     @length=length
     @weight=weight
     @distance=distance
+    @delivery_type=delivery_type
   end
 
   define_method(:volume) do
@@ -13,7 +14,12 @@ class Parcel
   end
 
   define_method(:cost_to_ship) do
-    cost = @height.*@width.*@length.*@weight.*@distance.*0.01
+    if @delivery_type == "regular_delivery"
+      cost = @height.*@width.*@length.*@weight.*@distance.*0.01
+    else
+      cost = @height.*@width.*@length.*@weight.*@distance.*0.01.*2
+    end
+
   end
 
 end
