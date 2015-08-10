@@ -15,8 +15,9 @@ get('/result') do
   @weight = params.fetch("weight").to_f()
   @distance = params.fetch("distance").to_f()
   @delivery_mode = params.fetch("delivery_mode")
-  test_parcel = Parcel.new(@height, @width, @depth, @weight, @distance )
+  test_parcel = Parcel.new(@height, @width, @depth, @weight, @distance, @delivery_mode )
   @shipping_cost= test_parcel.cost_to_ship()
   @volume=test_parcel.volume()
+  @cost=test_parcel.cost_to_ship()
   erb(:result)
 end
