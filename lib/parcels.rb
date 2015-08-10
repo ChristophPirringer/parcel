@@ -9,11 +9,11 @@ class Parcel
   end
 
   define_method(:volume) do
-    @parcel_volume=@height.*@width.*@length
+    parcel_volume=@height.*@width.*@length
   end
 
   define_method(:cost_to_ship) do
-    cost = @parcel_volume.*5.+@distance.*2./100
+    cost = @height.*@width.*@length.*@weight.*@distance.*0.01
   end
 
 end
